@@ -11,15 +11,18 @@ It will make a master that consists of `#steps`'s children. `#steps` can be a li
 ### More code
 ```java
 sm = new StepMaster(this)
-        .setSteps(R.id.steps) //a layout with steps
+        .setSteps(R.id.steps) //A layout with steps. Must be RelativeLayout, otherwise animations won't work correctly.
         .setButtons(R.array.masterButtons) //a string-array resource
         // Three elements of it are titles for Previous, Next, and Finish buttons.
-        .setAnimations(R.anim.la_slide_left_out, R.anim.la_slide_left_in, R.anim.la_slide_right_out, R.anim.la_slide_right_in)
+        .setAnimations(
+                R.anim.la_slide_left_out, R.anim.la_slide_left_in,
+                R.anim.la_slide_right_out, R.anim.la_slide_right_in)
         // Animations. You can find them in /res/ directory.
         // Current step will swipe off the screen, displaced by another step.
         .setOnStepChangeListener(new StepMaster.OnStepListener() {
             @Override
-            public boolean onStepChange(int oldStep, int newStep, byte direction, final StepMaster master) {
+            public boolean onStepChange(
+                int oldStep, int newStep, byte direction, final StepMaster master) {
                 if (direction == StepMaster.DIRECTION_BACKWARD)
                     return true;
                 // true == allow to change step

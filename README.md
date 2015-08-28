@@ -11,7 +11,8 @@ It will make a master that consists of `#steps`'s children. `#steps` can be a li
 ### More code
 ```java
 sm = new StepMaster(this)
-        .setSteps(R.id.steps) //A layout with steps. Must be RelativeLayout, otherwise animations won't work correctly.
+        .setSteps(R.id.steps) //A layout with steps.
+                //#steps must be RelativeLayout, otherwise animations won't work correctly.
         .setButtons(R.array.masterButtons) //a string-array resource
         // Three elements of it are titles for Previous, Next, and Finish buttons.
         .setAnimations(

@@ -314,7 +314,7 @@ public class StepMaster {
         void onStepChanged(int newStep, StepMaster master);
         void onFinish(StepMaster master);
     }
-    public StepMaster setOnStepChangeListener(OnStepListener listener) {
+    public StepMaster setOnStepListener(OnStepListener listener) {
         this.changeListener = listener;
         return this;
     }

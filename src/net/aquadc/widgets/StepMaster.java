@@ -1,4 +1,4 @@
-package net.aquadc.widgets;
+package net.aquadc.widgets.StepMaster;
 
 import android.app.Activity;
 import android.content.Context;

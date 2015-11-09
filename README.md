@@ -20,7 +20,7 @@ sm = new StepMaster(this)
                 R.anim.la_slide_right_out, R.anim.la_slide_right_in)
         // Animations. You can find them in /res/ directory.
         // Current step will swipe off the screen, displaced by another step.
-        .setOnStepChangeListener(new StepMaster.OnStepListener() {
+        .setOnStepListener(new StepMaster.OnStepListener() {
             @Override
             public boolean onStepChange(
                 int oldStep, int newStep, byte direction, final StepMaster master) {
